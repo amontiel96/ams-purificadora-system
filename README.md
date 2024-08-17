@@ -1,2 +1,2 @@
 # ams-purificadora-system
-sistema realizado con C# MVC
+system made with C# MVC

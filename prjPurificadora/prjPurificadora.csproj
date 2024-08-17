@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{832CEC6A-D670-4244-A59F-C7AEF441FC1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prjPurificadora</RootNamespace>
+    <AssemblyName>prjPurificadora</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico_gallo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.3.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\estadia\proyectoMVC\Prj_Elflautista\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\estadia\proyectoMVC\Prj_Elflautista\bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\estadia\proyectoMVC\Prj_Elflautista\bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\estadia\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\cls_CAbonos.cs" />
+    <Compile Include="Controlador\cls_CAbonosClientesEspeciales.cs" />
+    <Compile Include="Controlador\cls_CAltas.cs" />
+    <Compile Include="Controlador\cls_CBjas.cs" />
+    <Compile Include="Controlador\cls_CBotellones.cs" />
+    <Compile Include="Controlador\cls_CCargas.cs" />
+    <Compile Include="Controlador\cls_CClientes.cs" />
+    <Compile Include="Controlador\cls_CClientesVentas.cs" />
+    <Compile Include="Controlador\cls_CCompraBotellones.cs" />
+    <Compile Include="Controlador\cls_CCompras.cs" />
+    <Compile Include="Controlador\cls_CCorteCaja.cs" />
+    <Compile Include="Controlador\cls_CDevolucionesCompras.cs" />
+    <Compile Include="Controlador\cls_CDevolucionesVentas.cs" />
+    <Compile Include="Controlador\cls_CDtsConexion.cs" />
+    <Compile Include="Controlador\cls_CEmpleados.cs" />
+    <Compile Include="Controlador\cls_CExtras.cs" />
+    <Compile Include="Controlador\cls_CGastoRuta.cs" />
+    <Compile Include="Controlador\cls_CGastosProduccion.cs" />
+    <Compile Include="Controlador\cls_CInventario.cs" />
+    <Compile Include="Controlador\cls_CInventarioInicial.cs" />
+    <Compile Include="Controlador\cls_CLogin.cs" />
+    <Compile Include="Controlador\cls_CMantenimiento.cs" />
+    <Compile Include="Controlador\cls_CorteEmpleados.cs" />
+    <Compile Include="Controlador\cls_CPrecios.cs" />
+    <Compile Include="Controlador\cls_CPrestamosBote.cs" />
+    <Compile Include="Controlador\cls_CPrincipal.cs" />
+    <Compile Include="Controlador\cls_CProveedores.cs" />
+    <Compile Include="Controlador\cls_CRClientes.cs" />
+    <Compile Include="Controlador\cls_CRutas.cs" />
+    <Compile Include="Controlador\cls_CSplash.cs" />
+    <Compile Include="Controlador\cls_CVentas.cs" />
+    <Compile Include="Controlador\cls_diseño.cs" />
+    <Compile Include="Controlador\cls_RAdministrador.cs" />
+    <Compile Include="Controlador\cls_RAnalisis.cs" />
+    <Compile Include="Controlador\cls_RCompras.cs" />
+    <Compile Include="Controlador\cls_REstadoDeReusltados.cs" />
+    <Compile Include="Controlador\cls_RGastosExtras.cs" />
+    <Compile Include="Controlador\cls_RGastosRuta.cs" />
+    <Compile Include="Controlador\cls_RNominas.cs" />
+    <Compile Include="Controlador\cls_RUnidadesProducidas.cs" />
+    <Compile Include="Controlador\cls_RVentas.cs" />
+    <Compile Include="Controlador\Cls_Validaciones.cs" />
+    <Compile Include="Modelo\Conexion\cls_conexion.cs" />
+    <Compile Include="Modelo\DAO\cls_AbonosDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_AltasYBajasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_CargasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_ClientesDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_ComprasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_CorteDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_DevolucionesComprasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_DevolucionesVentasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_EmpleadosDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_ExtrasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_GastosRutaDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_LoginDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_MantenimientoDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_PreciosDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_PrestamosDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_ProductosDAO.cs" />
+    <Compile Include="Modelo\DAO\Cls_proveedorDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_ReportesDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_RutasDAO.cs" />
+    <Compile Include="Modelo\DAO\cls_VentasDAO.cs" />
+    <Compile Include="Modelo\VO\cls_AbonosVO.cs" />
+    <Compile Include="Modelo\VO\cls_AltasYBajasVO.cs" />
+    <Compile Include="Modelo\VO\cls_CargasVO.cs" />
+    <Compile Include="Modelo\VO\cls_ClientesVO.cs" />
+    <Compile Include="Modelo\VO\cls_ComprasVO.cs" />
+    <Compile Include="Modelo\VO\cls_CorteVO.cs" />
+    <Compile Include="Modelo\VO\cls_DevolucionesComprasVO.cs" />
+    <Compile Include="Modelo\VO\cls_DevolucionesVentasVO.cs" />
+    <Compile Include="Modelo\VO\cls_EmpleadosVO.cs" />
+    <Compile Include="Modelo\VO\cls_ExtrasVO.cs" />
+    <Compile Include="Modelo\VO\cls_GastosRutaVO.cs" />
+    <Compile Include="Modelo\VO\cls_LoginVO.cs" />
+    <Compile Include="Modelo\VO\cls_MantenimientoVO.cs" />
+    <Compile Include="Modelo\VO\cls_PreciosVO.cs" />
+    <Compile Include="Modelo\VO\cls_PrestamosVO.cs" />
+    <Compile Include="Modelo\VO\cls_ProductosVO.cs" />
+    <Compile Include="Modelo\VO\Cls_ProveedorVO.cs" />
+    <Compile Include="Modelo\VO\cls_ReporteVO.cs" />
+    <Compile Include="Modelo\VO\cls_RutasVO.cs" />
+    <Compile Include="Modelo\VO\cls_VentasVO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmAbonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAbonos.Designer.cs">
+      <DependentUpon>frmAbonos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAbonosEspeciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAbonosEspeciales.Designer.cs">
+      <DependentUpon>frmAbonosEspeciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAltas.Designer.cs">
+      <DependentUpon>frmAltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAnalisis.Designer.cs">
+      <DependentUpon>frmAnalisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmBajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBajas.Designer.cs">
+      <DependentUpon>frmBajas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmBotellones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBotellones.Designer.cs">
+      <DependentUpon>frmBotellones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCargas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCargas.Designer.cs">
+      <DependentUpon>frmCargas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmClientesUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmClientesUnidades.Designer.cs">
+      <DependentUpon>frmClientesUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCompraBote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCompraBote.Designer.cs">
+      <DependentUpon>frmCompraBote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmConfigPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmConfigPrecios.Designer.cs">
+      <DependentUpon>frmConfigPrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCorteDeCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCorteDeCaja.Designer.cs">
+      <DependentUpon>frmCorteDeCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCorteEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCorteEmpleados.Designer.cs">
+      <DependentUpon>frmCorteEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmDevolucionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmDevolucionesCompras.Designer.cs">
+      <DependentUpon>frmDevolucionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmDevolucionesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmDevolucionesVentas.Designer.cs">
+      <DependentUpon>frmDevolucionesVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmDiseño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmDiseño.Designer.cs">
+      <DependentUpon>frmDiseño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmDtsConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmDtsConexion.Designer.cs">
+      <DependentUpon>frmDtsConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmEstadoDeResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmEstadoDeResultados.Designer.cs">
+      <DependentUpon>frmEstadoDeResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmEstadoResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmEstadoResultados.Designer.cs">
+      <DependentUpon>frmEstadoResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmGastosExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmGastosExtras.Designer.cs">
+      <DependentUpon>frmGastosExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmGastosRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmGastosRuta.Designer.cs">
+      <DependentUpon>frmGastosRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmInventarioInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmInventarioInicial.Designer.cs">
+      <DependentUpon>frmInventarioInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMantenimiento.Designer.cs">
+      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPrestamos.Designer.cs">
+      <DependentUpon>frmPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRAdministrador.Designer.cs">
+      <DependentUpon>frmRAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRAnual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRAnual.Designer.cs">
+      <DependentUpon>frmRAnual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRCompras.Designer.cs">
+      <DependentUpon>frmRCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmReporteBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmReporteBase.Designer.cs">
+      <DependentUpon>frmReporteBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmReporteGProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmReporteGProduccion.Designer.cs">
+      <DependentUpon>frmReporteGProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRgastosExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRgastosExtras.Designer.cs">
+      <DependentUpon>frmRgastosExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRGastosRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRGastosRuta.Designer.cs">
+      <DependentUpon>frmRGastosRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRNominas.Designer.cs">
+      <DependentUpon>frmRNominas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRUnidadesProducidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRUnidadesProducidas.Designer.cs">
+      <DependentUpon>frmRUnidadesProducidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRutas.Designer.cs">
+      <DependentUpon>frmRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRVentas.Designer.cs">
+      <DependentUpon>frmRVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmVentClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmVentClientes.Designer.cs">
+      <DependentUpon>frmVentClientes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmAbonos.resx">
+      <DependentUpon>frmAbonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAbonosEspeciales.resx">
+      <DependentUpon>frmAbonosEspeciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAltas.resx">
+      <DependentUpon>frmAltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAnalisis.resx">
+      <DependentUpon>frmAnalisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmBajas.resx">
+      <DependentUpon>frmBajas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmBotellones.resx">
+      <DependentUpon>frmBotellones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCargas.resx">
+      <DependentUpon>frmCargas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmClientesUnidades.resx">
+      <DependentUpon>frmClientesUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCompraBote.resx">
+      <DependentUpon>frmCompraBote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmConfigPrecios.resx">
+      <DependentUpon>frmConfigPrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCorteDeCaja.resx">
+      <DependentUpon>frmCorteDeCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCorteEmpleados.resx">
+      <DependentUpon>frmCorteEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmDevolucionesCompras.resx">
+      <DependentUpon>frmDevolucionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmDevolucionesVentas.resx">
+      <DependentUpon>frmDevolucionesVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmDiseño.resx">
+      <DependentUpon>frmDiseño.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmDtsConexion.resx">
+      <DependentUpon>frmDtsConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmEstadoDeResultados.resx">
+      <DependentUpon>frmEstadoDeResultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmGastosExtras.resx">
+      <DependentUpon>frmGastosExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmGastosRuta.resx">
+      <DependentUpon>frmGastosRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmInventarioInicial.resx">
+      <DependentUpon>frmInventarioInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMantenimiento.resx">
+      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPrestamos.resx">
+      <DependentUpon>frmPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRAdministrador.resx">
+      <DependentUpon>frmRAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRAnual.resx">
+      <DependentUpon>frmRAnual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRCompras.resx">
+      <DependentUpon>frmRCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmReporteBase.resx">
+      <DependentUpon>frmReporteBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmReporteGProduccion.resx">
+      <DependentUpon>frmReporteGProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRgastosExtras.resx">
+      <DependentUpon>frmRgastosExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRGastosRuta.resx">
+      <DependentUpon>frmRGastosRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRNominas.resx">
+      <DependentUpon>frmRNominas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRUnidadesProducidas.resx">
+      <DependentUpon>frmRUnidadesProducidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRutas.resx">
+      <DependentUpon>frmRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRVentas.resx">
+      <DependentUpon>frmRVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmVentClientes.resx">
+      <DependentUpon>frmVentClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading....gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading_circle_fully_working.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading110.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress %284%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fond.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo copia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoNuevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallo copia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallo mio copia1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallo mio copia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallo mio nuevo copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gallo verdadero 1 copia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verdadero v1 copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading %288%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadingbar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress_bar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animated_progress.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading %286%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading_circle_fully_working1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 orasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logppng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondon3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logppng1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logppng2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logppng3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondon4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-banner-b7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoolClips_text1475.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mejorado editar hoy copia copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4Nuevo copia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoNuevo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico_gallo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
